@@ -1,128 +1,340 @@
-
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About My Family - Writing Exercise</title>
+<title>Advanced Essay Writing Task</title>
 
 <style>
-body{
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background:#f4f6f9;
-}
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        margin: 0;
+        padding: 30px;
+        line-height: 1.6;
+    }
 
-.container{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-}
+    .container {
+        max-width: 950px;
+        margin: auto;
+        background: white;
+        padding: 35px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
 
-h1,h2{
-    color:#2c3e50;
-}
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
 
-textarea{
-    width:100%;
-    min-height:120px;
-    padding:10px;
-    margin-top:10px;
-}
+    h2 {
+        color: #34495e;
+        margin-top: 30px;
+    }
 
-input{
-    padding:8px;
-    margin:5px;
-}
+    h3 {
+        color: #2c3e50;
+    }
 
-button{
-    background:#3498db;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
-}
+    section {
+        margin-bottom: 30px;
+    }
 
-button:hover{
-    background:#2980b9;
-}
+    textarea {
+        width: 100%;
+        min-height: 350px;
+        padding: 15px;
+        font-size: 16px;
+        resize: vertical;
+        box-sizing: border-box;
+    }
 
-.correct{
-    color:green;
-    font-weight:bold;
-}
+    button {
+        margin-top: 15px;
+        padding: 12px 24px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 
-.wrong{
-    color:red;
-    font-weight:bold;
-}
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    .success {
+        color: green;
+    }
+
+    .warning {
+        color: red;
+    }
+
+    .info {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    ul, ol {
+        padding-left: 25px;
+    }
+
+    #feedback {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+    }
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<hr>
+    <h1>ADVANCED ESSAY WRITING TASK</h1>
 
-<h2>Part A: Fill in the blanks</h2>
+    <section>
 
-<p>1. Kelly lives in
-<input id="q1"></p>
+        <h2>Read the Text Below Carefully</h2>
 
-<p>2. Kelly's mother's name is
-<input id="q2"></p>
+        <h3>The Impact of Artificial Intelligence on Education</h3>
 
-<p>3. Kelly's father works in a
-<input id="q3"></p>
+        <p>
+            Artificial Intelligence (AI) has become an important part of modern education.
+            Many schools and universities have started using AI-powered tools to support
+            teaching and learning activities. These technologies can provide personalized
+            learning experiences, help teachers assess students' work more efficiently,
+            and give immediate feedback to learners.
+        </p>
 
-<p>4. Kelly's sister loves listening to
-<input id="q4"></p>
+        <p>
+            However, the increasing use of AI in education has also raised several concerns.
+            Some educators worry that students may become too dependent on technology and
+            lose important skills such as critical thinking and creativity. Others argue
+            that unequal access to digital resources may widen the educational gap between
+            students from different socioeconomic backgrounds. In addition, questions about
+            data privacy and the ethical use of AI continue to be discussed.
+        </p>
 
-<p>5. Brandy is a pet
-<input id="q5"></p>
+        <p>
+            Despite these challenges, many experts believe that AI has the potential to
+            transform education positively if it is used responsibly and accompanied by
+            appropriate policies and guidance from educators.
+        </p>
 
-<button onclick="checkAnswers()">Check Answers</button>
+    </section>
 
-<p id="result"></p>
+    <section>
 
-<hr>
+        <h2>Essay Writing Task</h2>
 
-<h2>Part B: Write About Your Family</h2>
+        <p>
+            Write an essay of <strong>250–300 words</strong> discussing the use of
+            Artificial Intelligence in education.
+        </p>
 
-<p>Write 5–8 sentences about your family.</p>
+        <p><strong>In your essay, you should:</strong></p>
 
-<textarea placeholder="My name is..."></textarea>
+        <ol>
+            <li>State your opinion about whether AI should be widely used in schools.</li>
+            <li>Discuss at least two advantages of using AI in education.</li>
+            <li>Explain at least two potential disadvantages or challenges.</li>
+            <li>Provide examples or evidence to support your ideas.</li>
+            <li>Conclude by suggesting how schools should use AI effectively and responsibly.</li>
+        </ol>
+
+    </section>
+
+    <section>
+
+        <h2>Assessment Criteria</h2>
+
+        <ul>
+            <li>Content and development of ideas</li>
+            <li>Organization and coherence</li>
+            <li>Vocabulary range and appropriateness</li>
+            <li>Grammatical accuracy and complexity</li>
+            <li>Mechanics (spelling and punctuation)</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Your Essay</h2>
+
+        <textarea id="essay"
+        placeholder="Write your essay here..."></textarea>
+
+        <div class="info">
+            Word Count: <span id="wordCount">0</span>
+        </div>
+
+        <button onclick="evaluateEssay()">
+            Evaluate Essay
+        </button>
+
+    </section>
+
+    <section id="feedback"></section>
 
 </div>
 
 <script>
-function checkAnswers(){
 
-let score = 0;
+const essay = document.getElementById("essay");
+const counter = document.getElementById("wordCount");
 
-const answers = {
-q1:"california",
-q2:"carmen",
-q3:"bank",
-q4:"music",
-q5:"dog"
-};
+essay.addEventListener("input", updateCount);
 
-for(let id in answers){
-let user = document.getElementById(id).value.trim().toLowerCase();
+function updateCount() {
 
-if(user === answers[id]){
-score++;
-}
+    const words = essay.value
+        .trim()
+        .split(/\s+/)
+        .filter(word => word !== "");
+
+    counter.textContent =
+        essay.value.trim() === "" ? 0 : words.length;
 }
 
-document.getElementById("result").innerHTML =
-"You got " + score + " out of 5 correct!";
+function evaluateEssay() {
+
+    const text = essay.value.toLowerCase();
+
+    const words = text
+        .trim()
+        .split(/\s+/)
+        .filter(word => word !== "");
+
+    const wordCount = words.length;
+
+    let feedback = "<h2>Essay Evaluation</h2><ul>";
+
+    /* Word Count */
+
+    if (wordCount >= 250 && wordCount <= 300) {
+
+        feedback +=
+        "<li class='success'>✓ Word count requirement met (250–300 words).</li>";
+
+    } else {
+
+        feedback +=
+        "<li class='warning'>✗ Essay should contain 250–300 words.</li>";
+    }
+
+    /* Advantages */
+
+    const advantages = [
+        "benefit",
+        "advantage",
+        "efficient",
+        "improve",
+        "personalized",
+        "feedback"
+    ];
+
+    let advantageCount = 0;
+
+    advantages.forEach(word => {
+
+        if (text.includes(word)) {
+
+            advantageCount++;
+        }
+    });
+
+    if (advantageCount >= 2) {
+
+        feedback +=
+        "<li class='success'>✓ Advantages of AI are discussed.</li>";
+
+    } else {
+
+        feedback +=
+        "<li class='warning'>✗ Include at least two advantages of AI.</li>";
+    }
+
+    /* Challenges */
+
+    const challenges = [
+        "privacy",
+        "ethical",
+        "depend",
+        "challenge",
+        "problem",
+        "inequality",
+        "gap"
+    ];
+
+    let challengeCount = 0;
+
+    challenges.forEach(word => {
+
+        if (text.includes(word)) {
+
+            challengeCount++;
+        }
+    });
+
+    if (challengeCount >= 2) {
+
+        feedback +=
+        "<li class='success'>✓ Challenges or disadvantages are discussed.</li>";
+
+    } else {
+
+        feedback +=
+        "<li class='warning'>✗ Include at least two disadvantages or challenges.</li>";
+    }
+
+    /* Examples */
+
+    if (
+        text.includes("for example") ||
+        text.includes("for instance") ||
+        text.includes("such as")
+    ) {
+
+        feedback +=
+        "<li class='success'>✓ Examples or evidence are provided.</li>";
+
+    } else {
+
+        feedback +=
+        "<li class='warning'>✗ Add examples or evidence to support your ideas.</li>";
+    }
+
+    /* Conclusion */
+
+    if (
+        text.includes("in conclusion") ||
+        text.includes("to conclude") ||
+        text.includes("overall")
+    ) {
+
+        feedback +=
+        "<li class='success'>✓ Conclusion detected.</li>";
+
+    } else {
+
+        feedback +=
+        "<li class='warning'>✗ Include a concluding paragraph.</li>";
+    }
+
+    feedback += "</ul>";
+
+    document.getElementById("feedback").innerHTML = feedback;
 }
+
 </script>
 
 </body>
 </html>
+```
